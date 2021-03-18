@@ -53,12 +53,13 @@ const PostList = (props) => {
               } else {
                 return (
                   <Grid
+                    key={p.id}
                     bg="#ffffff"
                     _onClick={() => {
                       history.push(`/post/${p.id}`);
                     }}
                   >
-                    <Post key={p.id} {...p} />
+                    <Post {...p} />
                   </Grid>
                 );
               }
